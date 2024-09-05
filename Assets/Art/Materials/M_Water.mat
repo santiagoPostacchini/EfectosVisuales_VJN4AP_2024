@@ -69,8 +69,8 @@ Material:
     - _Size: 1
     - _Speed: 1
     - _TexScale: 3
-    - _WaveSpeedX: 0.001
-    - _WaveSpeedY: 0.002
+    - _WaveSpeedX: 0.003
+    - _WaveSpeedY: 0.004
     m_Colors:
     - _AbsortionCoefficient: {r: 0.08770581, g: 0.24156383, b: 0.24705872, a: 1}
     - _AbsortionColor: {r: 0.08770581, g: 0.24156383, b: 0.24705872, a: 1}
