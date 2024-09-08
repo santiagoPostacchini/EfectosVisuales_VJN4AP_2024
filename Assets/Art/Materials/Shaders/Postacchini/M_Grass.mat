@@ -20,7 +20,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _AOColor
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -38,12 +38,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AOBlend: 1.4
-    - _AOPos: 1
+    - _AOBlend: 0.81
+    - _AOPos: 1.21
     - _Amplitude: 10.53
     - _Frecuency: 1.39
-    - _GradientBlend: 1.59
-    - _GradientPos: -0.1
+    - _GradientBlend: 1.75
+    - _GradientPos: -0.7
     - _NoiseScaleX: 5
     - _NoiseScaleY: 0
     - _QueueControl: 0
@@ -52,9 +52,9 @@ Material:
     - _WindScale: 0.029
     - _WindStrength: 0.03
     m_Colors:
-    - _AOColor: {r: 0.10196077, g: 0.32549015, b: 0.09803919, a: 0}
-    - _ColorBase: {r: 0.31372547, g: 0.55294114, b: 0.30588236, a: 0}
-    - _ColorTop: {r: 0.5019608, g: 0.68627447, b: 0.5058824, a: 0}
+    - _AOColor: {r: 0.16037738, g: 0.023451408, b: 0.023451408, a: 1}
+    - _ColorBase: {r: 0.12606345, g: 0.16037738, b: 0.11423106, a: 0}
+    - _ColorTop: {r: 0.5, g: 0.5, b: 0.5, a: 0}
     - _NoiseScale: {r: 6.65, g: 1, b: 0, a: 0}
     - _WindMovement: {r: 6, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
