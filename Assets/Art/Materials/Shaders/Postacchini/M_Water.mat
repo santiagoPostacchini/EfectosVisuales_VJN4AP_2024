@@ -54,23 +54,23 @@ Material:
     - _Depth: 5
     - _DistortionScale: 1
     - _DistortionSpeed: 0.353
-    - _DistortionStrenght: 0.554
+    - _DistortionStrenght: 0.532
     - _FlowSpeed: 0.01
     - _FlowStrength: 0.004
     - _FoamDistance: 0.5
     - _FoamDistortion: 0.4
-    - _FresnelPower: 0.826
+    - _FresnelPower: 0.841
     - _NoiseScale: 1
     - _Noise_Scale: 1
     - _Normal_1: 0.486
     - _Opacity: 0.69
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Size: 1
-    - _Speed: 1
+    - _Size: 0.96
+    - _Speed: 1.33
     - _TexScale: 3
-    - _WaveSpeedX: 0.003
-    - _WaveSpeedY: 0.004
+    - _WaveSpeedX: 0.03
+    - _WaveSpeedY: -0.03
     m_Colors:
     - _AbsortionCoefficient: {r: 0.08770581, g: 0.24156383, b: 0.24705872, a: 1}
     - _AbsortionColor: {r: 0.08770581, g: 0.24156383, b: 0.24705872, a: 1}
@@ -84,7 +84,7 @@ Material:
     - _Layer_2_Tiling: {r: 3, g: 3, b: 0, a: 0}
     - _LightFoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _WaterColor: {r: 0, g: 0.6779661, b: 1, a: 0.92156863}
-    - _WaterSecondColor: {r: 0.10030254, g: 0.43396223, b: 0.26377335, a: 1}
+    - _WaterSecondColor: {r: 0.026432894, g: 0.16981131, b: 0.095591895, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &4594205635784312059
 MonoBehaviour:
