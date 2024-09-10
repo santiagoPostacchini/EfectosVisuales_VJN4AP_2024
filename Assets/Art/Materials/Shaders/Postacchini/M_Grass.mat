@@ -38,12 +38,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AOBlend: 0.81
-    - _AOPos: 1.21
+    - _AOBlend: 0.99
+    - _AOPos: 1.36
     - _Amplitude: 10.53
     - _Frecuency: 1.39
-    - _GradientBlend: 1.75
-    - _GradientPos: -0.7
+    - _GradientBlend: 0.53
+    - _GradientPos: -0.58
     - _NoiseScaleX: 5
     - _NoiseScaleY: 0
     - _QueueControl: 0

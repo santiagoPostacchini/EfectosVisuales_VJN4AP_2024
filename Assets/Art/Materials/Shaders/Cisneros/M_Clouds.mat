@@ -104,12 +104,12 @@ Material:
     - _ClearCoatSmoothness: 0
     - _CloudsAlpha: 3.2
     - _CloudsPower: 0.8
-    - _CloudsScale: 110.3
+    - _CloudsScale: 152.8
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DistortScale: 100
+    - _DistortScale: 150
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _ElectricityAmount: 2.69
