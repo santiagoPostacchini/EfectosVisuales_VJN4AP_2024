@@ -39,7 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AOBlend: 0.99
-    - _AOPos: 1.36
+    - _AOPos: 1.57
     - _Amplitude: 10.53
     - _Frecuency: 1.39
     - _GradientBlend: 0.53
@@ -52,9 +52,9 @@ Material:
     - _WindScale: 0.029
     - _WindStrength: 0.03
     m_Colors:
-    - _AOColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ColorBase: {r: 0, g: 0, b: 0, a: 0}
-    - _ColorTop: {r: 0.3773585, g: 0.23673905, b: 0.23673905, a: 0}
+    - _AOColor: {r: 0.05087282, g: 0.074, b: 0.017834, a: 1}
+    - _ColorBase: {r: 0.172, g: 0.172, b: 0.172, a: 0}
+    - _ColorTop: {r: 0.39, g: 0.2442857, b: 0.2442857, a: 0}
     - _NoiseScale: {r: 6.65, g: 1, b: 0, a: 0}
     - _WindMovement: {r: 6, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
