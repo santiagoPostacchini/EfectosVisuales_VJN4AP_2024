@@ -50,16 +50,20 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AbsortionCoefficient: 0.335
+    - _AbsortionCoefficient: 0.38
     - _Depth: 5
     - _DistortionScale: 1
     - _DistortionSpeed: 0.353
-    - _DistortionStrenght: 0.532
+    - _DistortionStrenght: 0.664
     - _FlowSpeed: 0.01
     - _FlowStrength: 0.004
+    - _FoamAmmount: 0.58
+    - _FoamCutOff: 1.02
     - _FoamDistance: 0.5
     - _FoamDistortion: 0.4
-    - _FresnelPower: 0.968
+    - _FoamScale: 110
+    - _FoamSpeed: 1
+    - _FresnelPower: 0.731
     - _NoiseScale: 1
     - _Noise_Scale: 1
     - _Normal_1: 0.486
@@ -78,6 +82,7 @@ Material:
     - _DeepWaterColor: {r: 0.08770584, g: 0.24156386, b: 0.24705875, a: 0}
     - _DistortionOffset: {r: 0, g: -0.1, b: 0, a: 0}
     - _DistortionTilling: {r: 1, g: 1, b: 0, a: 0}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 0.2627451}
     - _Layer_1_Offset: {r: 1, g: 1, b: 0, a: 0}
     - _Layer_1_Tiling: {r: 2, g: 2, b: 0, a: 0}
     - _Layer_2_Offset: {r: 1, g: 1, b: 0, a: 0}
