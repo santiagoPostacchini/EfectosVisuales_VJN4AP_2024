@@ -1053,7 +1053,8 @@ PrefabInstance:
       value: full cabin project
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 470536452665971155, guid: e6c0c577550007c4abf4d0aa118a4500, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6c0c577550007c4abf4d0aa118a4500, type: 3}
