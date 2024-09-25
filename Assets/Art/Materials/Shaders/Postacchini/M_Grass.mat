@@ -15,7 +15,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -44,11 +44,13 @@ Material:
     - _Frecuency: 1.39
     - _GradientBlend: -0.28
     - _GradientPos: -0.58
+    - _MaxInteractionDistance: 1
     - _NoiseScaleX: 5
     - _NoiseScaleY: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Scale: 0
+    - _SqrDistance: 1
     - _WindScale: 0.015
     - _WindStrength: 0.065
     m_Colors:
