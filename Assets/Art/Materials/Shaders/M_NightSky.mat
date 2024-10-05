@@ -47,7 +47,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _StarAmmount: 29
-    - _StarOffset: 0.5
+    - _StarOffset: 0.6
     - _StarScale: 413.4
     m_Colors:
     - _BottomColor: {r: 0.094735526, g: 0, b: 0.33299997, a: 0}
