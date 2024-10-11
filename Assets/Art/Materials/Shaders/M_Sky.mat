@@ -24,6 +24,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _MoonTexture:
+        m_Texture: {fileID: 2800000, guid: 76417ea2eec5b174384d6b024990d417, type: 3}
+        m_Scale: {x: 2, y: 4.4}
+        m_Offset: {x: 0.61, y: -0.45}
     - _Noise:
         m_Texture: {fileID: 2800000, guid: ef917acc6bf87b04d9edd30d3548523e, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -45,21 +49,24 @@ Material:
     - _DayNightSlider: 0
     - _GroundHeight: 1
     - _Height: 0.13
-    - _HorizonBlend: 30
+    - _HorizonBlend: 50
+    - _MoonPhase: 0.03574097
+    - _MoonSize: 0.1
     - _NoiseRotationSpeed: 5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SkyHeight: 1
     - _StarAmmount: 60
-    - _StarIntentisity: 230
+    - _StarIntentisity: 30
     - _StarOffset: 160
     - _StarScale: 413.4
     - _SunSize: 0.05
     m_Colors:
     - _BottomColor: {r: 0.094735526, g: 0, b: 0.33299997, a: 0}
-    - _GroundColor: {r: 0.227451, g: 0.227451, b: 0.227451, a: 0}
+    - _GroundColor: {r: 0.1792453, g: 0.119215034, b: 0.119215034, a: 0}
     - _HorizonColor: {r: 0.3529412, g: 0.3529412, b: 0.3529412, a: 0}
-    - _NightSkyColor: {r: 0.094735526, g: 0, b: 0.33299997, a: 0}
+    - _MoonColor: {r: 1.4980391, g: 1.4675912, b: 1.2970827, a: 0}
+    - _NightSkyColor: {r: 0.058158305, g: 0.024919897, b: 0.1509434, a: 0}
     - _NoiseScale: {r: 2, g: 2, b: 0, a: 0}
     - _SkyColor: {r: 0.34950158, g: 0.93258667, b: 0.9622642, a: 0}
     - _StarColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0}
