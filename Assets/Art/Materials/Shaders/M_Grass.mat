@@ -62,7 +62,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _WindScale: 0.015
-    - _WindStrength: 0.065
+    - _WindStrength: 0.189
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0

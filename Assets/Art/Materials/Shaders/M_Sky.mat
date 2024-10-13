@@ -17,7 +17,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -46,21 +46,32 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _CastShadows: 1
+    - _Cull: 2
     - _DayNightSlider: 0
+    - _DstBlend: 0
     - _GroundHeight: 1
     - _Height: 0.13
     - _HorizonBlend: 50
-    - _MoonPhase: 0.03574097
+    - _MoonPhase: 0.7061492
     - _MoonSize: 0.1
     - _NoiseRotationSpeed: 5
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SkyHeight: 1
+    - _SrcBlend: 1
     - _StarAmmount: 60
     - _StarIntentisity: 30
     - _StarOffset: 160
     - _StarScale: 413.4
     - _SunSize: 0.05
+    - _Surface: 0
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 2
     m_Colors:
     - _BottomColor: {r: 0.094735526, g: 0, b: 0.33299997, a: 0}
     - _GroundColor: {r: 0.1792453, g: 0.119215034, b: 0.119215034, a: 0}
