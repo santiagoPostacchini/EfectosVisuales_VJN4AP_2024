@@ -44,6 +44,7 @@ Material:
     - _AOPos: 2.12
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _Ammout: 0.2
     - _Amplitude: 10.53
     - _Blend: 0
     - _CastShadows: 0
@@ -68,8 +69,8 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _AOColor: {r: 0.074666664, g: 0.24, b: 0.074666664, a: 0}
-    - _ColorBase: {r: 0.28189927, g: 0.496, b: 0.2747626, a: 0}
-    - _ColorTop: {r: 0.41891348, g: 0.71099997, b: 0.42659995, a: 0}
+    - _ColorBase: {r: 0.28800002, g: 0.504, b: 0.28000003, a: 0}
+    - _ColorTop: {r: 0.43627626, g: 0.73800004, b: 0.44443098, a: 0}
     - _NoiseScale: {r: 6.65, g: 1, b: 0, a: 0}
     - _WindMovement: {r: -6, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
