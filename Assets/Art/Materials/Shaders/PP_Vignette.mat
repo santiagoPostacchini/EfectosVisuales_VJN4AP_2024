@@ -39,7 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Falloff: 0.72
-    - _Intensity: 1.04
+    - _Intensity: 0.95
     m_Colors:
     - _VignetteColor: {r: 0.03369848, g: 0.011836951, b: 0.13207549, a: 0}
   m_BuildTextureStacks: []
