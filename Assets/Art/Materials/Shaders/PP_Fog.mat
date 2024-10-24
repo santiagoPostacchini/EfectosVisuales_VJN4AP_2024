@@ -98,7 +98,7 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _FarClipPlane: 1000
-    - _FogAmmount: 0.0018137662
+    - _FogAmmount: 0.9999999
     - _FogDensity: 0.8
     - _FogHeightTreshold: 0.033
     - _Fullscreen_DepthTest: 0
