@@ -67,8 +67,8 @@ Material:
     - _QueueControl: 1
     - _QueueOffset: 0
     - _WindScale: 1
-    - _WindSpeed: 2.5
-    - _WindStrength: 0.23
+    - _WindSpeed: 3
+    - _WindStrength: 0.26
     m_Colors:
     - _MainColor: {r: 0.17915626, g: 0.6226415, b: 0.18354723, a: 0}
     - _WindDirection: {r: 1, g: 1, b: 0, a: 0}

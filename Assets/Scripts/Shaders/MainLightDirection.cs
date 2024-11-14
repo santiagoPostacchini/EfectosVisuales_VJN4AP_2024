@@ -1,14 +1,13 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-[ExecuteAlways]
 public class MainLightDirection : MonoBehaviour
 {
     [Header("SkyBox")]
     [SerializeField] private Material m_SkyboxMaterial;
     [SerializeField] private float _scrollAmmount;
+    [SerializeField] private float _rotVelocity;
     private string _MainLightDirName = "_MainLightDirection";
     private string _MainLightUpName = "_MainLightUp";
     private string _MainLightRightName = "_MainLightRight";
@@ -25,8 +24,11 @@ public class MainLightDirection : MonoBehaviour
 
     private float _lastRotationValue;
 
+    Action _skyMovementFunction;
+
     private void Start()
     {
+        _skyMovementFunction = Rotation;
         _PhaseValue = m_SkyboxMaterial.GetFloat(_MoonPhaseName);
         _lastRotationValue = transform.rotation.x;
     }
@@ -34,11 +36,44 @@ public class MainLightDirection : MonoBehaviour
 
     private void Update()
     {
+        _skyMovementFunction();
+
+        m_SkyboxMaterial.SetVector(_MainLightDirName, transform.forward);
+        m_SkyboxMaterial.SetVector(_MainLightUpName, transform.up);
+        m_SkyboxMaterial.SetVector(_MainLightRightName, transform.right);
+    }
+
+    void CheckDay(float rv = 0.00015f)
+    {
+        if (_lastRotationValue > -rv && _lastRotationValue < rv)
+        {
+            var sign = _lastRotationValue < 0 ? -1 : 1;
+            _day += 1 * sign;
+            Debug.Log(_day);
+            ChangeFog();
+        }
+        _lastRotationValue = transform.rotation.x;
+    }
+
+    void Rotation()
+    {
+        transform.Rotate(transform.right * _rotVelocity * Time.deltaTime, Space.Self);
+
+        _PhaseValue += (_PhaseDirection * Time.deltaTime);
+
+        CheckDay();
+
+        if (Input.GetKeyDown(KeyCode.I))
+            _skyMovementFunction = Inputs;
+    }
+
+    void Inputs()
+    {
         if (Input.mouseScrollDelta != Vector2.zero)
         {
             MoveLight();
-            
-            CheckDay();
+
+            CheckDay(0.015f);
         }
 
         if (Input.GetKeyDown(KeyCode.F))
@@ -46,20 +81,8 @@ public class MainLightDirection : MonoBehaviour
             StartCoroutine(ToggleFog(!_FogState));
         }
 
-        m_SkyboxMaterial.SetVector(_MainLightDirName, transform.forward);
-        m_SkyboxMaterial.SetVector(_MainLightUpName, transform.up);
-        m_SkyboxMaterial.SetVector(_MainLightRightName, transform.right);
-    }
-
-    void CheckDay()
-    {
-        if (_lastRotationValue > -0.015f && _lastRotationValue < 0.015f)
-        {
-            _day += Input.mouseScrollDelta.y;
-            Debug.Log(_day);
-            ChangeFog();
-        }
-        _lastRotationValue = transform.rotation.x;
+        if (Input.GetKeyDown(KeyCode.I))
+            _skyMovementFunction = Rotation;
     }
 
     void ChangeFog()
