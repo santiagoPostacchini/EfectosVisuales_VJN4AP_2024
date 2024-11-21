@@ -55,6 +55,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Bloom: 1
+    - _DF_Distance: -0.2
     - _DissolveAmmount: 1.15
     - _DissolveScale: 1.5
     - _DistortionAmmount: 0.1

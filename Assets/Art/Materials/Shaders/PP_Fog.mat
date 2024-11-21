@@ -98,11 +98,18 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _FarClipPlane: 1000
-    - _FogAmmount: 1
-    - _FogDensity: 1
+    - _FogAmmount: 0.9999016
+    - _FogDensity: 0.713
     - _FogHeightTreshold: 0.033
+    - _Fullscreen_AlphaBlendOperation: 0
+    - _Fullscreen_BlendMode: 1
+    - _Fullscreen_ColorBlendOperation: 0
     - _Fullscreen_DepthTest: 0
     - _Fullscreen_DepthWrite: 0
+    - _Fullscreen_DstAlphaBlend: 10
+    - _Fullscreen_DstColorBlend: 10
+    - _Fullscreen_SrcAlphaBlend: 1
+    - _Fullscreen_SrcColorBlend: 5
     - _Fullscreen_Stencil: 0
     - _Fullscreen_StencilComparison: 8
     - _Fullscreen_StencilDepthFail: 0
