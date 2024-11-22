@@ -4,12 +4,25 @@ using UnityEngine;
 
 public class FireFlies : MonoBehaviour
 {
-    
-    public AudioSource audioSource;
-    [Header("HurtPP")]
-    [SerializeField] private Material m_HurtMaterial;
-    private float _hurtAmmount;
-    private string _intensityName = "_Intensity";
+    private ParticleSystem _particleSystem = new ParticleSystem();
+    List<ParticleCollisionEvent> particleCollisionEvents = new List<ParticleCollisionEvent>();
 
+    public GameObject instantiateOnParticleCollision;
 
+    void Start()
+    {
+        _particleSystem = GetComponent<ParticleSystem>();
+    }
+
+    void OnParticleCollision(GameObject other)
+    {
+        int numCollisionEvents = _particleSystem.GetCollisionEvents(other, particleCollisionEvents);
+
+        for (int i = 0; i < numCollisionEvents; i++)
+        {
+            Hurt.instance.GetHurt();
+            Instantiate(instantiateOnParticleCollision, particleCollisionEvents[i].intersection, Quaternion.identity);
+        }
+    }
 }
+

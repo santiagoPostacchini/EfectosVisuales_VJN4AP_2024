@@ -2753,7 +2753,8 @@ GameObject:
   - component: {fileID: 667331395}
   - component: {fileID: 667331397}
   - component: {fileID: 667331396}
-  m_Layer: 0
+  - component: {fileID: 667331398}
+  m_Layer: 6
   m_Name: Fireflies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2797,7 +2798,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: d1a23988fa9aedd469b9f17cd52f9923, type: 2}
-  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
+  - {fileID: 2100000, guid: 60abc425dbc3aa64f82f34698236252c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3685,7 +3686,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6
+      scalar: 3
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -6620,7 +6621,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
@@ -6821,7 +6822,7 @@ ParticleSystem:
     shadowBias: 0.5
     worldSpace: 0
     dieWithParticles: 1
-    sizeAffectsWidth: 1
+    sizeAffectsWidth: 0
     sizeAffectsLifetime: 0
     inheritParticleColor: 1
     generateLightingData: 0
@@ -6903,26 +6904,26 @@ ParticleSystem:
         - serializedVersion: 3
           time: 0.007594935
           value: 0
-          inSlope: 29.061562
-          outSlope: 29.061562
+          inSlope: 3.9139624
+          outSlope: 3.9139624
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
-          outWeight: 0.18367322
+          outWeight: 0.7006
         - serializedVersion: 3
-          time: 0.08101282
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          time: 0.09676085
+          value: 0.12371136
+          inSlope: -0.32640767
+          outSlope: -0.32640767
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.8775497
-          outWeight: 0.13888875
+          inWeight: 1
+          outWeight: 0.14487737
         - serializedVersion: 3
           time: 0.99240506
           value: 0
-          inSlope: -1.0972224
-          outSlope: -1.0972224
+          inSlope: -0.13812557
+          outSlope: -0.13812557
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -7589,6 +7590,20 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &667331398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667331394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea918a170cc783744be5a1e8c7f57c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instantiateOnParticleCollision: {fileID: 7302701595194122535, guid: 38ee552bf5d47264396ab9ffb48cac28,
+    type: 3}
 --- !u!1 &685042033
 GameObject:
   m_ObjectHideFlags: 0
@@ -10069,9 +10084,9 @@ GameObject:
   - component: {fileID: 1475318047}
   - component: {fileID: 1475318057}
   - component: {fileID: 1475318056}
+  - component: {fileID: 1475318059}
   - component: {fileID: 1475318051}
   - component: {fileID: 1475318050}
-  - component: {fileID: 1475318058}
   - component: {fileID: 1475318052}
   - component: {fileID: 1475318054}
   - component: {fileID: 1475318053}
@@ -10565,7 +10580,7 @@ WindZone:
   m_WindTurbulence: 1
   m_WindPulseMagnitude: 0.5
   m_WindPulseFrequency: 0.01
---- !u!114 &1475318058
+--- !u!114 &1475318059
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10574,11 +10589,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1475318046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea918a170cc783744be5a1e8c7f57c96, type: 3}
+  m_Script: {fileID: 11500000, guid: c99799e59c26e7140862b21d8469ce53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1475318054}
   m_HurtMaterial: {fileID: 2100000, guid: 2421b1141afd1dd47ada20c673a63cb0, type: 2}
+  _partDamage: 0.01
 --- !u!1 &1485254379
 GameObject:
   m_ObjectHideFlags: 0

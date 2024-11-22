@@ -28,7 +28,7 @@ public class MainLightDirection : MonoBehaviour
 
     private void Start()
     {
-        _skyMovementFunction = Rotation;
+        _skyMovementFunction = Inputs;
         _PhaseValue = m_SkyboxMaterial.GetFloat(_MoonPhaseName);
         _lastRotationValue = transform.rotation.x;
     }
@@ -83,6 +83,11 @@ public class MainLightDirection : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.I))
             _skyMovementFunction = Rotation;
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            Hurt.instance.Heal();
+        }
     }
 
     void ChangeFog()
