@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PP_Vignette
-  m_Shader: {fileID: -6465566751694194690, guid: 4e1992efd5afadb4180401387d0723c3,
+  m_Name: PP_Hurt
+  m_Shader: {fileID: -6465566751694194690, guid: 44a2eb95b64ea784c86de2699ac01833,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,8 +38,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Falloff: 0.7
-    - _Intensity: 1.1
+    - _Falloff: 1.3
+    - _Intensity: 0
     m_Colors:
-    - _VignetteColor: {r: 0.03369848, g: 0.011836951, b: 0.13207549, a: 0}
+    - _VignetteColor: {r: 0.62264144, g: 0.16153437, b: 0.16153437, a: 0}
   m_BuildTextureStacks: []
