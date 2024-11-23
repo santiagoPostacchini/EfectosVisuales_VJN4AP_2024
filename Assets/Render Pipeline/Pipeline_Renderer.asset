@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5782148815795314810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: Temperature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  passMaterial: {fileID: 2100000, guid: 30b3384cadc6a5a4b8a73ec7225f2ef2, type: 2}
+  injectionPoint: 550
+  requirements: 4
+  passIndex: 0
 --- !u!114 &-4063301187373390505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,7 +89,8 @@ MonoBehaviour:
   - {fileID: -3233264314250057059}
   - {fileID: -4063301187373390505}
   - {fileID: 2153378015147066744}
-  m_RendererFeatureMap: 652938cb482ddbd19daa2d9c3c2321d357a52f2f19419cc77805fa4be555e21d
+  - {fileID: -5782148815795314810}
+  m_RendererFeatureMap: 652938cb482ddbd19daa2d9c3c2321d357a52f2f19419cc77805fa4be555e21d861f138449aec1af
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -129,6 +147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   passMaterial: {fileID: 2100000, guid: 2421b1141afd1dd47ada20c673a63cb0, type: 2}
-  injectionPoint: 600
+  injectionPoint: 550
   requirements: 4
   passIndex: 0
