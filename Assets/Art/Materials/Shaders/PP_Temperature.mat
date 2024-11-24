@@ -46,9 +46,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistanceFactor: -0.03502983
+    - _DistanceFactor: 0
     - _Falloff: 3.5
     - _Scale: 4.5
+    - _ShakeIntensity: 0
     m_Colors:
     - _HeatColor: {r: 0.9811321, g: 0.013883919, b: 0.013883919, a: 0}
     - _Speed: {r: 0, g: -0.4, b: 0, a: 0}

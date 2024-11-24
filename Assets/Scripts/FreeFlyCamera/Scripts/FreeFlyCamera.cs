@@ -3,6 +3,7 @@
 //                        (c) 2019 Sergey Stafeyev                           //
 //===========================================================================//
 
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
@@ -88,6 +89,25 @@ public class FreeFlyCamera : MonoBehaviour
     private Vector3 _initPosition;
     private Vector3 _initRotation;
 
+    [Space]
+
+    [SerializeField]
+    [Tooltip("Enable camera shaking effect")]
+    private bool _enableShake = false;
+
+    [SerializeField]
+    [Tooltip("Shake intensity")]
+    private float _shakeIntensity = 0.1f;
+
+    [SerializeField]
+    [Tooltip("Shake frequency")]
+    private float _shakeFrequency = 20f;
+
+    private Vector3 _originalLocalPosition;
+    private Quaternion _originalLocalRotation;
+
+    public float temperatureValue;
+
 #if UNITY_EDITOR
     private void OnValidate()
     {
@@ -101,6 +121,9 @@ public class FreeFlyCamera : MonoBehaviour
     {
         _initPosition = transform.position;
         _initRotation = transform.eulerAngles;
+
+        _originalLocalPosition = transform.localPosition;
+        _originalLocalRotation = transform.localRotation;
     }
 
     private void OnEnable()
@@ -122,9 +145,9 @@ public class FreeFlyCamera : MonoBehaviour
             _wantedMode = CursorLockMode.Locked;
         }
 
-        // Apply cursor state
+
         Cursor.lockState = _wantedMode;
-        // Hide cursor when locking
+
         Cursor.visible = (CursorLockMode.Locked != _wantedMode);
     }
 
@@ -185,7 +208,6 @@ public class FreeFlyCamera : MonoBehaviour
             if (Input.GetKey(_moveDown))
                 deltaPosition -= transform.up;
 
-            // Calc acceleration
             CalculateCurrentIncrease(deltaPosition != Vector3.zero);
 
             transform.position += deltaPosition * currentSpeed * _currentIncrease;
@@ -194,13 +216,11 @@ public class FreeFlyCamera : MonoBehaviour
         // Rotation
         if (_enableRotation)
         {
-            // Pitch
             transform.rotation *= Quaternion.AngleAxis(
                 -Input.GetAxis("Mouse Y") * _mouseSense,
                 Vector3.right
             );
 
-            // Paw
             transform.rotation = Quaternion.Euler(
                 transform.eulerAngles.x,
                 transform.eulerAngles.y + Input.GetAxis("Mouse X") * _mouseSense,
@@ -214,5 +234,47 @@ public class FreeFlyCamera : MonoBehaviour
             transform.position = _initPosition;
             transform.eulerAngles = _initRotation;
         }
+
+        if (_enableShake)
+        {
+            ApplyShake();
+        }
+    }
+
+    private void ApplyShake()
+    {
+        // Save the original position for the frame
+        Vector3 originalPosition = transform.position;
+
+        float time = Time.time * _shakeFrequency;
+
+        // Calculate shake offset
+        Vector3 shakeOffset = new Vector3(
+            (Mathf.PerlinNoise(time, 0.0f) - 0.5f) * _shakeIntensity * ClampToRange(temperatureValue),
+            (Mathf.PerlinNoise(0.0f, time) - 0.5f) * _shakeIntensity * ClampToRange(temperatureValue),
+            0
+        );
+
+        // Temporarily apply the shake offset
+        transform.position += shakeOffset;
+
+        // Restore the original position after rendering this frame
+        StartCoroutine(ResetPositionNextFrame(originalPosition));
+    }
+
+    private IEnumerator ResetPositionNextFrame(Vector3 originalPosition)
+    {
+        // Wait for the end of the frame to reset position
+        yield return new WaitForEndOfFrame();
+
+        transform.position = originalPosition;
+    }
+
+    float ClampToRange(float v)
+    {
+        if (v < 0.5f)
+            return 0f;
+        else
+            return Mathf.Clamp01((v - 0.5f) * 2f);
     }
 }

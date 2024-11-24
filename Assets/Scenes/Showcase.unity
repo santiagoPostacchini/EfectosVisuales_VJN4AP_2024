@@ -10167,7 +10167,7 @@ Transform:
   m_GameObject: {fileID: 1475318046}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.087931715, z: -0, w: -0.99612653}
-  m_LocalPosition: {x: 10.738022, y: 11.420683, z: 17.228958}
+  m_LocalPosition: {x: 10.18, y: 11.420683, z: 20.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10258,6 +10258,10 @@ MonoBehaviour:
   _enableSpeedAcceleration: 1
   _speedAccelerationFactor: 1.5
   _initPositonButton: 114
+  _enableShake: 1
+  _shakeIntensity: 0.2
+  _shakeFrequency: 50
+  temperatureValue: 0
 --- !u!82 &1475318053
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10607,10 +10611,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2075b8ed06079148902a028322f51d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freeCam: {fileID: 1475318052}
   fire: {fileID: 152348251}
   m_Temperature: {fileID: 2100000, guid: 30b3384cadc6a5a4b8a73ec7225f2ef2, type: 2}
   _maxDistance: 40
   _minDistance: 7.5
+  tempValue: 0
+  _freezeDelay: 2
+  _heatDelay: 2
+  _returnDelay: 20
 --- !u!1 &1485254379
 GameObject:
   m_ObjectHideFlags: 0
