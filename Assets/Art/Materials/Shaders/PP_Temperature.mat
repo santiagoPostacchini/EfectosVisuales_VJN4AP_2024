@@ -46,7 +46,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DistanceFactor: 0.94558185
+    - _DistanceFactor: 0
     - _Falloff: 3.5
     - _Scale: 4.5
     - _ShakeIntensity: 0

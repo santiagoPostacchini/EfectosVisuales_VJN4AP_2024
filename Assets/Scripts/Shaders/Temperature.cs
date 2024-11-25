@@ -26,8 +26,8 @@ public class Temperature : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, fire.transform.position);
 
-        float minRange = _minDistance + 3f;
-        float maxRange = _maxDistance - 3f;
+        float minRange = _minDistance + 5f;
+        float maxRange = _maxDistance - 5f;
 
         float distanceFactor = Mathf.InverseLerp(minRange, maxRange, distance);
 
@@ -59,7 +59,7 @@ public class Temperature : MonoBehaviour
             isLerping = false;
         }
 
-        if (tempValue < -0.5f && !isBurning && distance < minRange || tempValue > 0.5f && !isBurning &&  distance > maxRange)
+        if (tempValue < -0.5f && !isBurning && distance < _minDistance || tempValue > 0.5f && !isBurning &&  distance > maxRange)
         {
             isBurning = true;
             StartCoroutine(Burn());

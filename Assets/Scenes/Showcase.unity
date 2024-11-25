@@ -10606,15 +10606,15 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 61.12412
-      outSlope: 61.12412
+      inSlope: 18.563732
+      outSlope: 18.563732
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.016360154
-      value: 1
+      time: 0.025651654
+      value: 0.47619045
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -10622,8 +10622,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.16866009
     - serializedVersion: 3
-      time: 0.3964139
-      value: 0.9980662
+      time: 0.4057054
+      value: 0.47425663
       inSlope: 0.02259966
       outSlope: 0.02259966
       tangentMode: 0
@@ -10631,8 +10631,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.07274902
     - serializedVersion: 3
-      time: 0.60575485
-      value: 0.9973026
+      time: 0.6150464
+      value: 0.47349304
       inSlope: -0.04471275
       outSlope: -0.04471275
       tangentMode: 0
@@ -10676,7 +10676,7 @@ MonoBehaviour:
   fire: {fileID: 152348251}
   m_Temperature: {fileID: 2100000, guid: 30b3384cadc6a5a4b8a73ec7225f2ef2, type: 2}
   _maxDistance: 40
-  _minDistance: 7.5
+  _minDistance: 5
   tempValue: 0
   _freezeDelay: 2
   _heatDelay: 2
