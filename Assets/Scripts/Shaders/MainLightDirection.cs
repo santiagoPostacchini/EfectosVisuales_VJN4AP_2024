@@ -83,11 +83,6 @@ public class MainLightDirection : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.I))
             _skyMovementFunction = Rotation;
-
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Hurt.instance.Heal();
-        }
     }
 
     void ChangeFog()
