@@ -6,6 +6,7 @@ public class FireFlies : MonoBehaviour
 {
     private ParticleSystem _particleSystem = new ParticleSystem();
     List<ParticleCollisionEvent> particleCollisionEvents = new List<ParticleCollisionEvent>();
+    public AnimationCurve curve;
 
     public GameObject instantiateOnParticleCollision;
 
@@ -20,7 +21,7 @@ public class FireFlies : MonoBehaviour
 
         for (int i = 0; i < numCollisionEvents; i++)
         {
-            Hurt.instance.GetHurt();
+            Hurt.instance.GetHurt(curve);
             Instantiate(instantiateOnParticleCollision, particleCollisionEvents[i].intersection, Quaternion.identity);
         }
     }

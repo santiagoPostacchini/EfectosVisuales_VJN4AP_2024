@@ -8,7 +8,7 @@ public class Hurt : MonoBehaviour
     public static Hurt instance;
     [SerializeField] private Material m_HurtMaterial;
     public float effectDuration;
-    [SerializeField] private AnimationCurve _hitCurve;
+    public AnimationCurve hitCurve;
     private string _intensityName = "_Intensity";
 
 
@@ -22,21 +22,21 @@ public class Hurt : MonoBehaviour
         m_HurtMaterial.SetFloat(_intensityName, 0f);
     }
 
-    public void GetHurt()
+    public void GetHurt(AnimationCurve curve)
     {
         //if(_hurtAmmount < 1f)
         //    _hurtAmmount += _partDamage;
         //    m_HurtMaterial.SetFloat(_intensityName, _hurtAmmount);
-        StartCoroutine(LerpHurt());
+        StartCoroutine(LerpHurt(curve));
     }
 
-    IEnumerator LerpHurt()
+    IEnumerator LerpHurt(AnimationCurve curve)
     {
         var t = 0f;
 
         while (t <= 1f)
         {
-            var life = _hitCurve.Evaluate(t);
+            var life = curve.Evaluate(t);
             m_HurtMaterial.SetFloat(_intensityName, life);
             t += Time.deltaTime / effectDuration;
             yield return null;

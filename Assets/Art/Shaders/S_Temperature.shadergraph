@@ -20,9 +20,6 @@
         },
         {
             "m_Id": "3d1609cd95654d35bbe9865a4691972c"
-        },
-        {
-            "m_Id": "bc17075236e74747b311c0270140fd5a"
         }
     ],
     "m_Keywords": [],
@@ -30,9 +27,6 @@
     "m_CategoryData": [
         {
             "m_Id": "112b0a3c4e054666bbdbea0f0ceeeffe"
-        },
-        {
-            "m_Id": "df26bf6dd46c49a0a5d8251d4933a0a0"
         }
     ],
     "m_Nodes": [
@@ -768,15 +762,15 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 2188.0,
-            "y": -116.00000762939453
+            "x": 2273.0,
+            "y": -116.0
         },
         "m_Blocks": []
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 2188.0,
-            "y": 84.0000228881836
+            "x": 2273.0,
+            "y": 84.00000762939453
         },
         "m_Blocks": [
             {
@@ -1138,7 +1132,7 @@
         "plus"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": false,
+    "m_PreviewExpanded": true,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -4312,34 +4306,6 @@
 }
 
 {
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "bc17075236e74747b311c0270140fd5a",
-    "m_Guid": {
-        "m_GuidSerialized": "e9ecbfd2-a40c-4119-ba07-db2d8fd2ebde"
-    },
-    "m_Name": "ShakeIntensity",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "ShakeIntensity",
-    "m_DefaultReferenceName": "_ShakeIntensity",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 0.699999988079071,
-    "m_FloatType": 1,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
-    }
-}
-
-{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicValueMaterialSlot",
     "m_ObjectId": "be2be72ba9f54db4b4725a3fe6fff2fe",
@@ -4889,18 +4855,6 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
-    "m_ObjectId": "df26bf6dd46c49a0a5d8251d4933a0a0",
-    "m_Name": "Shake",
-    "m_ChildObjectList": [
-        {
-            "m_Id": "bc17075236e74747b311c0270140fd5a"
-        }
-    ]
 }
 
 {

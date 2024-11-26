@@ -72,7 +72,7 @@ public class Temperature : MonoBehaviour
 
     IEnumerator Burn()
     {
-        Hurt.instance.GetHurt();
+        Hurt.instance.GetHurt(Hurt.instance.hitCurve);
         yield return new WaitForSeconds(Hurt.instance.effectDuration);
         isBurning = false;
     }
