@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
+    public float temperatureValue;
     public float sensX;
     public float sensY;
 
@@ -20,6 +19,9 @@ public class PlayerCam : MonoBehaviour
 
     private void Update()
     {
+        if (Dialogue.Instance.importantTextOnDisplay) return;
+        if (PlayerInventory.Instance.isActive) return;
+
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
 

@@ -93,13 +93,13 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Distance: 1
+    - _Distance: 0.027
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _FarClipPlane: 1000
-    - _FogAmmount: 0.99999964
-    - _FogDensity: 0.713
+    - _FogAmmount: 1
+    - _FogDensity: 1.7
     - _FogHeightTreshold: 0.033
     - _Fullscreen_AlphaBlendOperation: 0
     - _Fullscreen_BlendMode: 1

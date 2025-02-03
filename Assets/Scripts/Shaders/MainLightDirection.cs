@@ -28,7 +28,7 @@ public class MainLightDirection : MonoBehaviour
 
     private void Start()
     {
-        _skyMovementFunction = Inputs;
+        _skyMovementFunction = Rotation;
         _PhaseValue = m_SkyboxMaterial.GetFloat(_MoonPhaseName);
         _lastRotationValue = transform.rotation.x;
     }
@@ -49,7 +49,7 @@ public class MainLightDirection : MonoBehaviour
         {
             var sign = _lastRotationValue < 0 ? -1 : 1;
             _day += 1 * sign;
-            Debug.Log(_day);
+            //Debug.Log(_day);
             ChangeFog();
         }
         _lastRotationValue = transform.rotation.x;

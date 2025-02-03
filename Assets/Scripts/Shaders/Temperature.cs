@@ -1,10 +1,11 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Temperature : MonoBehaviour
 {
-    public FreeFlyCamera freeCam;
+    public FireIgnition fireIgnition;
+    public PlayerCam mainCam;
     public GameObject fire;
     [SerializeField] private Material m_Temperature;
     [SerializeField] private float _maxDistance;
@@ -65,9 +66,17 @@ public class Temperature : MonoBehaviour
             StartCoroutine(Burn());
         }
 
-        m_Temperature.SetFloat(_distanceName, tempValue);
+        if (fireIgnition.isOn)
+        {
+            m_Temperature.SetFloat(_distanceName, tempValue);
+        }
+        else
+        {
+            m_Temperature.SetFloat(_distanceName, Mathf.Clamp(tempValue, 0, 1));
+        }
+        
 
-        freeCam.temperatureValue = tempValue;
+        mainCam.temperatureValue = tempValue;
     }
 
     IEnumerator Burn()

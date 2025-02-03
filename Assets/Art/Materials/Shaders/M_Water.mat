@@ -17,7 +17,7 @@ Material:
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -52,6 +52,7 @@ Material:
     m_Floats:
     - _AbsortionCoefficient: 0.36
     - _Depth: 3.72
+    - _Distance: 1
     - _DistortionScale: 1
     - _DistortionSpeed: 0.353
     - _DistortionStrenght: 0.664
@@ -68,7 +69,7 @@ Material:
     - _Noise_Scale: 1
     - _Normal_1: 0.486
     - _Opacity: 0.69
-    - _QueueControl: 0
+    - _QueueControl: 1
     - _QueueOffset: 0
     - _Size: 1.43
     - _Speed: 1.33
@@ -79,6 +80,7 @@ Material:
     - _AbsortionCoefficient: {r: 0.08770581, g: 0.24156383, b: 0.24705872, a: 1}
     - _AbsortionColor: {r: 0.08770581, g: 0.24156383, b: 0.24705872, a: 1}
     - _DarkFoamColor: {r: 0.23449522, g: 0.24843466, b: 0.681, a: 1}
+    - _DeepWater: {r: 0.10030257, g: 0.43396226, b: 0.26377338, a: 1}
     - _DeepWaterColor: {r: 0.08770584, g: 0.24156386, b: 0.24705875, a: 0}
     - _DistortionOffset: {r: 0, g: -0.1, b: 0, a: 0}
     - _DistortionTilling: {r: 1, g: 1, b: 0, a: 0}
@@ -88,6 +90,7 @@ Material:
     - _Layer_2_Offset: {r: 1, g: 1, b: 0, a: 0}
     - _Layer_2_Tiling: {r: 3, g: 3, b: 0, a: 0}
     - _LightFoamColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShallowWater: {r: 0.5333334, g: 0.8358512, b: 1, a: 1}
     - _WaterColor: {r: 0.11863652, g: 0.4277376, b: 0.8113208, a: 1}
     - _WaterSecondColor: {r: 0.026432894, g: 0.16981131, b: 0.095591895, a: 1}
   m_BuildTextureStacks: []

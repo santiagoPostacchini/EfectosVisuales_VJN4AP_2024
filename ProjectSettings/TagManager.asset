@@ -8,11 +8,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - RippleEffect
   - Water
   - UI
   - Fly
-  - 
+  - ObjectsInHand
   - 
   - 
   - 

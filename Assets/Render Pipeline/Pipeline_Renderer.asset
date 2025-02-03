@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
   m_Name: Temperature
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   passMaterial: {fileID: 2100000, guid: 30b3384cadc6a5a4b8a73ec7225f2ef2, type: 2}
   injectionPoint: 550
   requirements: 4
@@ -32,7 +32,7 @@ MonoBehaviour:
   m_Active: 1
   passMaterial: {fileID: 2100000, guid: eaf608b0eeb24f146ad2d61f2953f29f, type: 2}
   injectionPoint: 550
-  requirements: 4
+  requirements: -12
   passIndex: 0
 --- !u!114 &-3325014109212628635
 MonoBehaviour:
@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
   m_Name: Fog
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   passMaterial: {fileID: 2100000, guid: f8b93d58b002e5448acefec82c6459d1, type: 2}
-  injectionPoint: 550
+  injectionPoint: 600
   requirements: 5
   passIndex: 0
 --- !u!114 &-3233264314250057059
@@ -85,12 +85,12 @@ MonoBehaviour:
       type: 3}
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
-  - {fileID: -3325014109212628635}
   - {fileID: -3233264314250057059}
   - {fileID: -4063301187373390505}
   - {fileID: 2153378015147066744}
   - {fileID: -5782148815795314810}
-  m_RendererFeatureMap: 652938cb482ddbd19daa2d9c3c2321d357a52f2f19419cc77805fa4be555e21d861f138449aec1af
+  - {fileID: -3325014109212628635}
+  m_RendererFeatureMap: 9daa2d9c3c2321d357a52f2f19419cc77805fa4be555e21d861f138449aec1af652938cb482ddbd1
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -116,20 +116,20 @@ MonoBehaviour:
   m_AssetVersion: 2
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 229
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 154
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0
-    stencilCompareFunction: 3
-    passOperation: 3
+    stencilCompareFunction: 4
+    passOperation: 6
     failOperation: 0
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 2
-  m_DepthPrimingMode: 2
+  m_DepthPrimingMode: 1
   m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_IntermediateTextureMode: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
   m_Name: Hurt
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   passMaterial: {fileID: 2100000, guid: 2421b1141afd1dd47ada20c673a63cb0, type: 2}
   injectionPoint: 550
   requirements: 4

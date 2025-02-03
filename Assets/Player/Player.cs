@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
+using static UnityEngine.ParticleSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     [Tooltip("Modifies how fast the player will move.")]
     [SerializeField] private float _movSpeed = 5f;
     public Transform orientation;
+
+    public ParticleSystem ripple;
 
     private float _xAxis = 0f, _zAxis = 0f;
 
@@ -35,6 +37,8 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Dialogue.Instance.importantTextOnDisplay) return;
+        if (PlayerInventory.Instance.isActive) return;
         if ((_xAxis != 0 || _zAxis != 0))
         {
             Movement(_xAxis, _zAxis);
@@ -60,4 +64,36 @@ public class Player : MonoBehaviour
 
         _rb.AddForce(_dir * _movSpeed * 10f, ForceMode.Force);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 4)
+        {
+            ripple.Play();
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        var emission = ripple.emission;
+        if (other.gameObject.layer == 4)
+        {
+            if((_xAxis != 0 || _zAxis != 0))
+            {
+                var higher = Mathf.Abs(_zAxis) > Mathf.Abs(_xAxis) ? _zAxis : _xAxis;
+                emission.rateOverTime = Mathf.Abs(higher) * _movSpeed;
+            }
+            else
+            {
+                emission.rateOverTime = 0f;
+            }
+        }
+    }
+    
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.layer == 4)
+    //    {
+    //        ripple.Stop();
+    //    }
+    //}
 }
