@@ -38,7 +38,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         if (Dialogue.Instance.importantTextOnDisplay) return;
-        if (PlayerInventory.Instance.isActive) return;
+        if (PlayerInventory.Instance.isInventoryActive) return;
+        if (PlayerInventory.Instance.isInspectActive) return;
         if ((_xAxis != 0 || _zAxis != 0))
         {
             Movement(_xAxis, _zAxis);
@@ -72,22 +73,22 @@ public class Player : MonoBehaviour
             ripple.Play();
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        var emission = ripple.emission;
-        if (other.gameObject.layer == 4)
-        {
-            if((_xAxis != 0 || _zAxis != 0))
-            {
-                var higher = Mathf.Abs(_zAxis) > Mathf.Abs(_xAxis) ? _zAxis : _xAxis;
-                emission.rateOverTime = Mathf.Abs(higher) * _movSpeed;
-            }
-            else
-            {
-                emission.rateOverTime = 0f;
-            }
-        }
-    }
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    var emission = ripple.emission;
+    //    if (other.gameObject.layer == 4)
+    //    {
+    //        if((_xAxis != 0 || _zAxis != 0))
+    //        {
+    //            var higher = Mathf.Abs(_zAxis) > Mathf.Abs(_xAxis) ? _zAxis : _xAxis;
+    //            emission.rateOverTime = Mathf.Abs(higher) * _movSpeed;
+    //        }
+    //        else
+    //        {
+    //            emission.rateOverTime = 0f;
+    //        }
+    //    }
+    //}
     
     //private void OnTriggerExit(Collider other)
     //{

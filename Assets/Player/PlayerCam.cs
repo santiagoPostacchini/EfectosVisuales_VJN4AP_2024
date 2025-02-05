@@ -20,7 +20,8 @@ public class PlayerCam : MonoBehaviour
     private void Update()
     {
         if (Dialogue.Instance.importantTextOnDisplay) return;
-        if (PlayerInventory.Instance.isActive) return;
+        if (PlayerInventory.Instance.isInventoryActive) return;
+        if (PlayerInventory.Instance.isInspectActive) return;
 
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;

@@ -50,7 +50,7 @@ Material:
     - Vector1_95BBCBE0: 211.6
     - Vector1_C5543ECF: 4.04
     - Vector1_E23798DE: 1.16
-    - _CameraSize: 20
+    - _CameraSize: 3
     - _Noise_Scale: 1
     - _NormalStrength: 0.3
     - _Normal_Strength: 0.1
@@ -62,7 +62,7 @@ Material:
     - Color_A271762B: {r: 0.11614455, g: 0.13666959, b: 0.5471698, a: 0.050980393}
     - Color_AFFD055F: {r: 0.7454045, g: 0.7454045, b: 0.7454045, a: 0.53333336}
     - Color_E0824245: {r: 0.05126947, g: 0.1912017, b: 0.4341537, a: 0.14901961}
-    - _CameraPosition: {r: -24.616844, g: 13.299999, b: 66.30465, a: 0}
+    - _CameraPosition: {r: 16.685684, g: 13.299999, b: 59.66322, a: 0}
     - _Deep_Color: {r: 0, g: 0.00043043625, b: 0.08627451, a: 0.14901961}
     - _ParticlePosition: {r: 0, g: 0, b: 0, a: 0}
     - _Shallow_Color: {r: 0.025490195, g: 0.09607845, b: 0.21764706, a: 0.20392157}

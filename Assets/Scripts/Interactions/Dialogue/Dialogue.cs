@@ -20,7 +20,7 @@ public class Dialogue : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerInventory.Instance.isActive) return;
+        if (PlayerInventory.Instance.isInventoryActive) return;
         if (Input.GetMouseButtonDown(0))
         {
             if (dialogueUI.text.Length > 0)

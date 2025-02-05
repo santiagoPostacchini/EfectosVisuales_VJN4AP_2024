@@ -25,7 +25,7 @@ public class PlayerInteraction : MonoBehaviour
     void InteractionRay()
     {
         if (Dialogue.Instance.importantTextOnDisplay) return;
-        if (PlayerInventory.Instance.isActive) return;
+        if (PlayerInventory.Instance.isInventoryActive) return;
 
         Ray ray = mainCam.ViewportPointToRay(Vector3.one / 2f);
         RaycastHit hit;

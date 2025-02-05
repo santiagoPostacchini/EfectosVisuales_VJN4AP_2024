@@ -15,15 +15,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IInteractable
     public void Interact()
     {
         Item recivedItem = InventoryManager.Instance.GetSelectedItem(this, false);
-        if(recivedItem != null)
-        {
-            PlayerInventory.Instance.GetItemToHand(recivedItem);
-            Debug.Log("Recived Item: " + recivedItem.name);
-        }
-        else
-        {
-            Debug.Log("No item recieved");
-        }
+        InventoryTagName.Instance.selectedItem = recivedItem;
     }
 
     public void OnDrop(PointerEventData eventData)

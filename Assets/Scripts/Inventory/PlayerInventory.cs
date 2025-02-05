@@ -4,12 +4,15 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     public static PlayerInventory Instance;
-    public GameObject inventory;
-    public GameObject inventoryUITag;
+    public GameObject inventoryUI;
+    public GameObject optionsUI;
+    public GameObject inspectUI;
     public KeyCode toggleKey;
     public KeyCode useKey;
+    public KeyCode backKey;
     public Transform objectHolder;
-    [HideInInspector] public bool isActive = false;
+    [HideInInspector] public bool isInventoryActive = false;
+    [HideInInspector] public bool isInspectActive = false;
     [HideInInspector] public Item itemInHand;
     [HideInInspector] public GameObject itemInHandPrefab;
 
@@ -20,22 +23,39 @@ public class PlayerInventory : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(toggleKey))
+        if (Input.GetKeyDown(toggleKey) && !isInspectActive)
         {
-            isActive = !isActive;
-            inventory.SetActive(isActive);
-            inventoryUITag.SetActive(isActive);
-            SetCursorLock(isActive);
+            ToggleInventory();
+            SetCursorLock(isInventoryActive);
+        }
+        if (Input.GetKeyDown(backKey) && !isInventoryActive && isInspectActive)
+        {
+            ToggleInspect();
         }
         if(Input.GetKeyDown(useKey))
         {
             if (itemInHand != null)
             {
-                if (isActive) return;
+                if (isInventoryActive) return;
                 if (PlayerInteraction.Instance.interactionUI.activeSelf) return;
                 itemInHand.prefab.GetComponent<ObjectBehaviour>().Use();
             }
         }
+    }
+
+    void ToggleInventory()
+    {
+        isInventoryActive = !isInventoryActive;
+        inventoryUI.SetActive(isInventoryActive);
+        optionsUI.SetActive(false);
+    }
+
+    public void ToggleInspect()
+    {
+        isInspectActive = !isInspectActive;
+        ToggleInventory();
+        inspectUI.SetActive(isInspectActive);
+        Item3DViewer.Instance.ToggleCamera();
     }
 
     void SetCursorLock(bool b)
