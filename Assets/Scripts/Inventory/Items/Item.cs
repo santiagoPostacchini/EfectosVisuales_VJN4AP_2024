@@ -5,10 +5,8 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     [Header("Only Gameplay")]
-    public Transform positionInHand;
     public GameObject prefab;
     public ItemType type;
-    public ActionType actionType;
 
     [Header("Only UI")]
     public Sprite image;

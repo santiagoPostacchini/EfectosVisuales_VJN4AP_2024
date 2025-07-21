@@ -87,6 +87,7 @@ public class PlayerInventory : MonoBehaviour
         if (itemInHand != null)
         {
             Destroy(itemInHandPrefab);
+            itemInHand = null;
         }
     }
 }

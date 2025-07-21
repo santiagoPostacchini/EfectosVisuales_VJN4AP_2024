@@ -8,8 +8,6 @@ public class FireFlies : MonoBehaviour
     List<ParticleCollisionEvent> particleCollisionEvents = new List<ParticleCollisionEvent>();
     public AnimationCurve curve;
 
-    public GameObject instantiateOnParticleCollision;
-
     void Start()
     {
         _particleSystem = GetComponent<ParticleSystem>();
@@ -22,7 +20,7 @@ public class FireFlies : MonoBehaviour
         for (int i = 0; i < numCollisionEvents; i++)
         {
             Hurt.instance.GetHurt(curve);
-            Instantiate(instantiateOnParticleCollision, particleCollisionEvents[i].intersection, Quaternion.identity);
+            AudioManager.Instance.Play("Buzz", true);
         }
     }
 }

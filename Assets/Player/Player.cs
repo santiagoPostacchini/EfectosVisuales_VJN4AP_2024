@@ -1,6 +1,5 @@
 using UnityEngine;
-using UnityEngine.Android;
-using static UnityEngine.ParticleSystem;
+using UnityEngine.VFX;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Player : MonoBehaviour
@@ -10,8 +9,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float _movSpeed = 5f;
     public Transform orientation;
 
-    public ParticleSystem ripple;
-
     private float _xAxis = 0f, _zAxis = 0f;
 
     private Vector3 _dir = new();
@@ -20,19 +17,31 @@ public class Player : MonoBehaviour
 
     public static Player instance;
 
+    [SerializeField] private ParticleSystem _particleSysRipple;
+
+    [SerializeField] private VisualEffect _vfxSplash;
+
+    private bool splashActive = false;
+    bool isMoving = false;
+
     private void Awake()
     {
+        _vfxSplash.Stop();
         _rb = GetComponent<Rigidbody>();
         _rb.angularDrag = 1f;
         _rb.constraints = RigidbodyConstraints.FreezeRotation;
         instance = this;
-
     }
 
     private void Update()
     {
         _xAxis = Input.GetAxis("Horizontal");
         _zAxis = Input.GetAxis("Vertical");
+
+        isMoving = (_xAxis != 0 || _zAxis != 0);
+
+        var ripemission = _particleSysRipple.emission;
+        ripemission.rateOverTime = isMoving ? 1f : 0f;
     }
 
     private void FixedUpdate()
@@ -40,7 +49,8 @@ public class Player : MonoBehaviour
         if (Dialogue.Instance.importantTextOnDisplay) return;
         if (PlayerInventory.Instance.isInventoryActive) return;
         if (PlayerInventory.Instance.isInspectActive) return;
-        if ((_xAxis != 0 || _zAxis != 0))
+        
+        if (isMoving)
         {
             Movement(_xAxis, _zAxis);
             SpeedControl();
@@ -68,33 +78,23 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 4)
+        if (other.gameObject.layer == 4 && !splashActive)
         {
-            ripple.Play();
+            splashActive = true;
         }
     }
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    var emission = ripple.emission;
-    //    if (other.gameObject.layer == 4)
-    //    {
-    //        if((_xAxis != 0 || _zAxis != 0))
-    //        {
-    //            var higher = Mathf.Abs(_zAxis) > Mathf.Abs(_xAxis) ? _zAxis : _xAxis;
-    //            emission.rateOverTime = Mathf.Abs(higher) * _movSpeed;
-    //        }
-    //        else
-    //        {
-    //            emission.rateOverTime = 0f;
-    //        }
-    //    }
-    //}
-    
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.gameObject.layer == 4)
-    //    {
-    //        ripple.Stop();
-    //    }
-    //}
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(isMoving && splashActive) 
+            _vfxSplash.Play();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == 4 && splashActive)
+        {
+            splashActive = false;
+        }
+    }
 }

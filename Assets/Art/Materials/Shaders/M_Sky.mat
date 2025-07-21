@@ -56,8 +56,8 @@ Material:
     - _GroundHeight: 1
     - _Height: 0.13
     - _HorizonBlend: 50
-    - _MoonPhase: 181.26418
-    - _MoonSize: 0.1
+    - _MoonPhase: 1040.8511
+    - _MoonSize: 0.03
     - _NoiseRotationSpeed: 5
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -79,7 +79,7 @@ Material:
     - _MoonColor: {r: 1.4980391, g: 1.4675912, b: 1.2970827, a: 0}
     - _NightSkyColor: {r: 0.058158305, g: 0.024919897, b: 0.1509434, a: 0}
     - _NoiseScale: {r: 2, g: 2, b: 0, a: 0}
-    - _SkyColor: {r: 0.34950158, g: 0.93258667, b: 0.9622642, a: 0}
+    - _SkyColor: {r: 0, g: 0.81237173, b: 1, a: 0}
     - _StarColor: {r: 0.6320754, g: 0.6320754, b: 0.6320754, a: 0}
     - _SunColor: {r: 4, g: 3.278896, b: 0.1320755, a: 0}
     - _Tilling: {r: 3, g: 3, b: 0, a: 0}

@@ -152,9 +152,6 @@
         },
         {
             "m_Id": "9211187129e8465e8fdfd17084d5079b"
-        },
-        {
-            "m_Id": "7301025f4584461f99bcfeda0fe0c448"
         }
     ],
     "m_GroupDatas": [
@@ -1570,31 +1567,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
-    "m_ObjectId": "3c436fcc33e24d86acd2318068d3aceb",
-    "m_Id": 0,
-    "m_DisplayName": "Out",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "3cedfe9d168e4a6cb7597b4ac856c24b",
     "m_Id": 0,
@@ -2478,40 +2450,6 @@
         "z": 0.0
     },
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.ScreenPositionNode",
-    "m_ObjectId": "7301025f4584461f99bcfeda0fe0c448",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "Screen Position",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 1621.15380859375,
-            "y": 207.1697540283203,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "3c436fcc33e24d86acd2318068d3aceb"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_ScreenSpaceType": 0
 }
 
 {
@@ -3805,8 +3743,8 @@
         "m_Position": {
             "serializedVersion": "2",
             "x": -193.00001525878907,
-            "y": 409.0,
-            "width": 206.0,
+            "y": 385.0,
+            "width": 205.9999237060547,
             "height": 131.0
         }
     },

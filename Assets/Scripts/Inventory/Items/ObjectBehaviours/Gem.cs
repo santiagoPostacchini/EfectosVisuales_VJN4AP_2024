@@ -5,6 +5,9 @@ using UnityEngine;
 public class Gem : ObjectBehaviour
 {
     public List<string> lines = new List<string>();
+
+    public Color maskColor;
+    
     public override void Use()
     {
         Debug.Log("Im a diamond");

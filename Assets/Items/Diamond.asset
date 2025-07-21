@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Diamond
   m_EditorClassIdentifier: 
   prefab: {fileID: 8618519641742873014, guid: 23ffc546620614d4b82c17fd7d8d1006, type: 3}
-  type: 0
-  actionType: 0
+  type: 4
   image: {fileID: 21300000, guid: acae5594d6a9b444197b8d4f2bcc1ca2, type: 3}
   stackable: 0
   usable: 1

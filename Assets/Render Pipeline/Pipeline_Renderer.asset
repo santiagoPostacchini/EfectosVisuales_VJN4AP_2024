@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8144992447850695565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: BeamDistort
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  passMaterial: {fileID: 2100000, guid: 84786d2b00693814499cf6ba18108ced, type: 2}
+  injectionPoint: 600
+  requirements: 4
+  passIndex: 0
 --- !u!114 &-5782148815795314810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,9 +29,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
   m_Name: Temperature
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   passMaterial: {fileID: 2100000, guid: 30b3384cadc6a5a4b8a73ec7225f2ef2, type: 2}
-  injectionPoint: 550
+  injectionPoint: 600
   requirements: 4
   passIndex: 0
 --- !u!114 &-4063301187373390505
@@ -31,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   passMaterial: {fileID: 2100000, guid: eaf608b0eeb24f146ad2d61f2953f29f, type: 2}
-  injectionPoint: 550
+  injectionPoint: 600
   requirements: -12
   passIndex: 0
 --- !u!114 &-3325014109212628635
@@ -46,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
   m_Name: Fog
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   passMaterial: {fileID: 2100000, guid: f8b93d58b002e5448acefec82c6459d1, type: 2}
   injectionPoint: 600
   requirements: 5
@@ -65,7 +82,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   passMaterial: {fileID: 2100000, guid: 5c9953f718e4ae04daab12d760905092, type: 2}
+  injectionPoint: 600
+  requirements: 4
+  passIndex: 0
+--- !u!114 &-1703768772122857960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: Outline
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  passMaterial: {fileID: 2100000, guid: 9b4f1f793d9ee374aa2f3c4cf0741736, type: 2}
   injectionPoint: 550
+  requirements: 6
+  passIndex: 0
+--- !u!114 &-1162100507436838974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
+  m_Name: Blur
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  passMaterial: {fileID: 2100000, guid: dda5319244ac4a649a75d4dd7d4701f3, type: 2}
+  injectionPoint: 600
   requirements: 4
   passIndex: 0
 --- !u!114 &11400000
@@ -85,12 +136,15 @@ MonoBehaviour:
       type: 3}
     hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
   m_RendererFeatures:
-  - {fileID: -3233264314250057059}
   - {fileID: -4063301187373390505}
+  - {fileID: -3233264314250057059}
   - {fileID: 2153378015147066744}
   - {fileID: -5782148815795314810}
   - {fileID: -3325014109212628635}
-  m_RendererFeatureMap: 9daa2d9c3c2321d357a52f2f19419cc77805fa4be555e21d861f138449aec1af652938cb482ddbd1
+  - {fileID: -1162100507436838974}
+  - {fileID: -1703768772122857960}
+  - {fileID: -8144992447850695565}
+  m_RendererFeatureMap: 57a52f2f19419cc79daa2d9c3c2321d37805fa4be555e21d861f138449aec1af652938cb482ddbd1c20feddcbe63dfef18ae362654ff5ae873b49ecf852cf78e
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -145,8 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d613f08f173d4dd895bb07b3230baa9, type: 3}
   m_Name: Hurt
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   passMaterial: {fileID: 2100000, guid: 2421b1141afd1dd47ada20c673a63cb0, type: 2}
-  injectionPoint: 550
+  injectionPoint: 600
   requirements: 4
   passIndex: 0

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aada9bcf7cfea4a438517b5cee1bf85b, type: 3}
+  m_Name: Jade
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3377187224486800, guid: ab351d1f6bfcc8d4fb664197e7796076, type: 3}
+  type: 4
+  image: {fileID: 21300000, guid: 116620caccc339b489792086f306ac0c, type: 3}
+  stackable: 0
+  usable: 1

@@ -70,6 +70,6 @@ Material:
     - _Steps: 5
     - _Transparency: 0.774
     m_Colors:
-    - _DiamondColor: {r: 0.051886797, g: 0.9627148, b: 1, a: 1}
-    - _Emission_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
+    - _DiamondColor: {r: 0.972549, g: 0.0098259095, b: 0, a: 1}
+    - _Emission_Color: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
